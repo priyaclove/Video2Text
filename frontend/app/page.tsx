@@ -1,3 +1,4 @@
+import { BrandMark } from "./components/BrandMark";
 import {
   AutoAwesomeIcon,
   PdfFileIcon,
@@ -23,11 +24,9 @@ export default function Home() {
 
 function TopNav() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-black/10 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
       <div className="flex justify-between items-center px-4 md:px-10 py-4 max-w-[1200px] mx-auto">
-        <span className="text-2xl font-bold tracking-tight text-on-surface">
-          {APP_NAME}
-        </span>
+        <BrandMark variant="nav" />
         <div className="hidden md:flex items-center gap-6">
           <a
             href="#"
@@ -50,7 +49,7 @@ function TopNav() {
 function Hero() {
   return (
     <section className="flex flex-col items-center text-center mb-8">
-      <div className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-white/10 mb-6">
+      <div className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-black/10 mb-6">
         <span className="font-mono text-xs text-primary uppercase tracking-widest">
           AI-Powered Documentation Generator
         </span>
@@ -96,9 +95,9 @@ function FeatureBento() {
                 documentation.
               </p>
             </div>
-            <div className="mt-8 rounded-xl overflow-hidden border border-white/5 bg-surface-container h-48 relative">
+            <div className="mt-8 rounded-xl overflow-hidden border border-black/5 bg-surface-container h-48 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-transparent" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(194,193,255,0.25),transparent_50%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(163,0,1,0.35),transparent_50%)]" />
               <svg
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full opacity-50"
@@ -107,7 +106,7 @@ function FeatureBento() {
               >
                 <path
                   d="M0,100 Q50,40 100,100 T200,100 T300,100 T400,100"
-                  stroke="rgb(194,193,255)"
+                  stroke="#a30001"
                   strokeWidth="1.5"
                   fill="none"
                 />
@@ -178,7 +177,7 @@ function ExportTile({
   const bar =
     accent === "primary" ? "bg-primary/20" : "bg-secondary/20";
   return (
-    <div className="h-32 bg-surface-container-low rounded-lg border border-white/5 p-4 flex flex-col justify-end">
+    <div className="h-32 bg-surface-container-low rounded-lg border border-black/5 p-4 flex flex-col justify-end">
       <span className="font-mono text-xs tracking-wider text-on-surface-variant">
         {label}
       </span>
@@ -189,7 +188,7 @@ function ExportTile({
 
 function CallToAction() {
   return (
-    <section className="mt-32 glass-card rounded-3xl p-12 text-center border border-white/5 overflow-hidden relative">
+    <section className="mt-32 glass-card rounded-3xl p-12 text-center border border-black/5 overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
       <h2 className="relative text-3xl md:text-4xl font-bold tracking-tight mb-6">
         Ready to automate your technical writing?
@@ -202,7 +201,7 @@ function CallToAction() {
         <button className="bg-on-surface text-background px-10 py-4 rounded-xl font-bold hover:bg-white transition-colors">
           Start Free Trial
         </button>
-        <button className="border border-white/10 text-on-surface px-10 py-4 rounded-xl font-bold hover:bg-white/5 transition-colors">
+        <button className="border border-black/10 text-on-surface px-10 py-4 rounded-xl font-bold hover:bg-black/5 transition-colors">
           Book a Demo
         </button>
       </div>
@@ -212,10 +211,10 @@ function CallToAction() {
 
 function SiteFooter() {
   return (
-    <footer className="w-full py-8 border-t border-white/5 bg-background mt-auto">
+    <footer className="w-full py-8 border-t border-black/5 bg-background mt-auto">
       <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-10 max-w-[1200px] mx-auto gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <span className="text-2xl font-bold text-on-surface">{APP_NAME}</span>
+          <BrandMark variant="footer" />
           <p className="text-sm text-on-tertiary-container opacity-80 hover:opacity-100 transition-opacity">
             © {new Date().getFullYear()} {APP_NAME}. Precision engineered
             intelligence.

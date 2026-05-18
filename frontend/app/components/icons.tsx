@@ -71,3 +71,20 @@ export function PdfFileIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function LogoMark({ className }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 36 24"
+      fill="currentColor"
+      aria-hidden
+      className={className}
+    >
+      <path d="M3 3 L3 21 L17 12 Z" />
+      <rect x="21" y="5.5" width="13" height="2.5" rx="1" />
+      <rect x="21" y="10.75" width="13" height="2.5" rx="1" />
+      <rect x="21" y="16" width="9" height="2.5" rx="1" />
+    </svg>
+  );
+}

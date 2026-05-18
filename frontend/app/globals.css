@@ -1,62 +1,60 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #131313;
-  --color-on-background: #e5e2e1;
-  --color-surface: #131313;
-  --color-on-surface: #e5e2e1;
-  --color-on-surface-variant: #c7c4d6;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-surface-container-low: #1c1b1b;
-  --color-surface-container: #201f1f;
-  --color-surface-container-high: #2a2a2a;
-  --color-surface-container-highest: #353534;
-  --color-surface-variant: #353534;
+  --color-background: #fafaf7;
+  --color-on-background: #0a0a0a;
+  --color-surface: #ffffff;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #525252;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fafaf7;
+  --color-surface-container: #f4f3ef;
+  --color-surface-container-high: #ebe7e1;
+  --color-surface-container-highest: #e0dcd5;
+  --color-surface-variant: #ebe7e1;
 
-  --color-primary: #c2c1ff;
-  --color-on-primary: #1c0b9f;
-  --color-primary-container: #5856d6;
-  --color-on-primary-container: #e7e4ff;
+  --color-primary: #a30001;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #7a0001;
+  --color-on-primary-container: #ffe5e5;
 
   --color-secondary: #adc6ff;
   --color-on-secondary: #002e69;
   --color-secondary-container: #4b8eff;
 
-  --color-tertiary: #c6c6c7;
-  --color-on-tertiary-container: #e6e6e6;
+  --color-tertiary: #6b6b6b;
+  --color-on-tertiary-container: #1c1c1c;
 
-  --color-error: #ffb4ab;
-  --color-outline: #918f9f;
-  --color-outline-variant: #464554;
+  --color-error: #b91c1c;
+  --color-outline: #a3a3a3;
+  --color-outline-variant: #d4d4d0;
 
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
 html {
-  background: #000;
+  background: #fafaf7;
 }
 
 body {
-  background: #000;
+  background: #fafaf7;
   color: var(--color-on-surface);
   font-family: var(--font-sans);
   overflow-x: hidden;
-  selection-background-color: rgba(194, 193, 255, 0.3);
+  selection-background-color: rgba(163, 0, 1, 0.3);
 }
 
 ::selection {
-  background: rgba(194, 193, 255, 0.3);
+  background: rgba(163, 0, 1, 0.3);
 }
 
 .glass-card {
-  background: rgba(23, 23, 23, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .ai-glow {
-  box-shadow: 0 0 64px -12px rgba(194, 193, 255, 0.15);
+  box-shadow: 0 12px 48px -12px rgba(163, 0, 1, 0.25);
 }

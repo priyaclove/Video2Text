@@ -143,13 +143,13 @@ export function UrlGenerator() {
             placeholder="Paste YouTube video URL..."
             required
             disabled={isBusy}
-            className="w-full bg-black border border-white/10 rounded-xl py-4 pl-12 pr-4 text-on-surface focus:ring-2 focus:ring-primary/50 focus:border-primary focus:outline-none transition-all disabled:opacity-60"
+            className="w-full bg-white border border-black/10 rounded-xl py-4 pl-12 pr-4 text-on-surface focus:ring-2 focus:ring-primary/40 focus:border-primary focus:outline-none transition-all disabled:opacity-60"
           />
         </div>
         <button
           type="submit"
           disabled={isBusy}
-          className="bg-primary text-on-primary px-8 py-4 rounded-xl font-semibold whitespace-nowrap hover:shadow-[0_0_20px_rgba(194,193,255,0.4)] active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+          className="bg-primary text-on-primary px-8 py-4 rounded-xl font-semibold whitespace-nowrap hover:shadow-[0_0_20px_rgba(163,0,1,0.5)] active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {state.kind === "submitting"
             ? "Submitting…"
@@ -180,14 +180,14 @@ export function UrlGenerator() {
             <a
               href={`${API_BASE}${state.job.download_url}`}
               download
-              className="bg-primary text-on-primary px-6 py-3 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(194,193,255,0.4)] active:scale-95 transition-all"
+              className="bg-primary text-on-primary px-6 py-3 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(163,0,1,0.5)] active:scale-95 transition-all"
             >
               Download Guide
             </a>
             <button
               type="button"
               onClick={reset}
-              className="border border-white/10 text-on-surface px-6 py-3 rounded-xl font-semibold hover:bg-white/5 transition-colors"
+              className="border border-black/10 text-on-surface px-6 py-3 rounded-xl font-semibold hover:bg-black/5 transition-colors"
             >
               Process another
             </button>
@@ -201,7 +201,7 @@ export function UrlGenerator() {
           <button
             type="button"
             onClick={reset}
-            className="border border-white/10 text-on-surface px-6 py-3 rounded-xl font-semibold hover:bg-white/5 transition-colors"
+            className="border border-black/10 text-on-surface px-6 py-3 rounded-xl font-semibold hover:bg-black/5 transition-colors"
           >
             Try again
           </button>
